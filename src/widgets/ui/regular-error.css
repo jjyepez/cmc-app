@@ -1,0 +1,16 @@
+.RegularError {
+  width: 100vw;
+  height: 100vh;
+  color: #ccc;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.RegularError-emoji {
+  font-size: 7rem;
+}
+.RegularError-message {
+  margin-top: 20%;
+  font-family: monospace, 'sans-serif';
+  font-size: 2rem;
+}
