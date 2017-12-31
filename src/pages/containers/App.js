@@ -1,5 +1,6 @@
 // --- React
 import React, { Component } from 'react'
+import ons from 'onsenui'
 // --- recursos, data y otras fuentes
 // --- contenedores y UI
 import AppUI from '../ui/AppUI'
@@ -8,7 +9,7 @@ import { GetAPIdata } from '../../data/get-api-data'
 
 class App extends Component {
   state = {
-    data: {rslt:'empty'}
+    data: ['empty']
   }
   componentWillMount = event => {
     const APIurl     = 'https://api.coinmarketcap.com/v1/global/'
@@ -20,16 +21,22 @@ class App extends Component {
       callback: this.fetchCallback,
       fallback: this.fetchFallback
     }
-    infoGlobal.fetch( options )
+    infoGlobal.fetch( options, false )
   }
   fetchFallback = e => {
-    this.setState({
-      data
-    })
+    ons.notification.alert({message:`Error: ${e}`})
   }
   fetchCallback = data => {
+    const formattedData = () => Object.keys( data ).map( (el, key) => {
+      const dato = data[el]
+      return (
+          `${el}: ${dato}`
+        )
+      }
+    )
+console.log( formattedData() )
     this.setState({
-      data
+      data: formattedData()
     })
   }
   handleSetRef = element => {
@@ -38,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <AppUI
-        {...this.state.data}
+        data = {this.state.data}
       />
     )
   }

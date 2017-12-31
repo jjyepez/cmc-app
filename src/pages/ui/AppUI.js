@@ -24,10 +24,9 @@ class AppUI extends Component {
     return [
       {
         content: (
-          <Page key = {0}>
+          <Page key={0}>
             <List
-              data  = {this.props.rs}
-              dataD = {this.props.dataD}
+              data={this.props.data}
             />
           </Page>
         ),

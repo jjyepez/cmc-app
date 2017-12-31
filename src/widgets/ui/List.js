@@ -8,26 +8,22 @@ class ListUI extends Component{
     return (
       <List>
         <ListHeader>Encabezado</ListHeader>
-        { this.props.dataD && this.props.dataD.map( item => (
-              <ListItem
-                className = "List-ListItem"
-                key       = { item._id }
-              >
-                <div className = "Left">
-                  <Avatar
-                    size      = {40}
-                    className = "List-Avatar"
-                    imageURL  = { item.avatar }
-                  />
-                </div>
-                <div className = "Center">
-                  <div>{item.nombre} {item.apellido}</div>
-                  <small>{item.correo}</small>
-                </div>
-              </ListItem>
+        <ListItem className = "List-ListItem">
+          {
+            this.props.data.map( (item, i) => {
+                console.log( item )
+                return (
+                  <div
+                    className="ListItem-dato"
+                    key = {i}
+                  >
+                    {item}
+                  </div>
+                )
+              }
             )
-          )
-        }
+          }
+        </ListItem>
       </List>
     )
   }
