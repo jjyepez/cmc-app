@@ -10,7 +10,8 @@ export class GetAPIdata {
   }
   fetch( iargs = false ){
     this.route = iargs || this.route
-    const urlBase = 'https://noesishosting.com/sw/cors/?a=cors&url=';
+    const urlBase = 'http://cors-proxy.htmldriven.com/?url=';
+    // --- NOESISHOSTING ---> 'https://noesishosting.com/sw/cors/?a=cors&url=';
     const urlCORS = this.route.cors ? urlBase : ''
     const url     = `${urlCORS}${this.route.url}`
     const options = {
