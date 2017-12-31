@@ -11,13 +11,12 @@ class ListUI extends Component{
         <ListItem className = "List-ListItem">
           {
             this.props.data.map( (item, i) => {
-                console.log( item )
                 return (
                   <div
                     className="ListItem-dato"
                     key = {i}
                   >
-                    {item[0]}: {item[1]}
+                    <b>{item[0]}</b>: {item[1]}
                   </div>
                 )
               }

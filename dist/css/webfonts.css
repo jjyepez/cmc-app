@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'firacode';
+  src: url('webfonts/firacode/FiraCode-Regular-webfont.eot');
+  src: url('webfonts/firacode/FiraCode-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/firacode/FiraCode-Regular-webfont.woff') format('woff'),
+       url('webfonts/firacode/FiraCode-Regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'firacode';
+  src: url('webfonts/firacode/FiraCode-Medium-webfont.eot');
+  src: url('webfonts/firacode/FiraCode-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/firacode/FiraCode-Medium-webfont.woff') format('woff'),
+       url('webfonts/firacode/FiraCode-Medium-webfont.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'firacode';
+  src: url('webfonts/firacode/FiraCode-Bold-webfont.eot');
+  src: url('webfonts/firacode/FiraCode-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/firacode/FiraCode-Bold-webfont.woff') format('woff'),
+       url('webfonts/firacode/FiraCode-Bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'amble';
+  src: url('webfonts/amble/Amble-Regular-webfont.eot');
+  src: url('webfonts/amble/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/amble/Amble-Regular-webfont.woff') format('woff'),
+       url('webfonts/amble/Amble-Regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: '1942';
+    src: url('webfonts/1942/1942-webfont.eot');
+    src: url('webfonts/1942/1942-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/1942/1942-webfont.woff') format('woff'),
+         url('webfonts/1942/1942-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('webfonts/roboto-slab/RobotoSlab-Regular-webfont.eot');
+    src: url('webfonts/roboto-slab/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/roboto-slab/RobotoSlab-Regular-webfont.woff') format('woff'),
+         url('webfonts/roboto-slab/RobotoSlab-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('webfonts/roboto-slab/RobotoSlab-Thin-webfont.eot');
+    src: url('webfonts/roboto-slab/RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/roboto-slab/RobotoSlab-Thin-webfont.woff') format('woff'),
+         url('webfonts/roboto-slab/RobotoSlab-Thin-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('webfonts/roboto-slab/RobotoSlab-Light-webfont.eot');
+    src: url('webfonts/roboto-slab/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/roboto-slab/RobotoSlab-Light-webfont.woff') format('woff'),
+         url('webfonts/roboto-slab/RobotoSlab-Light-webfont.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('webfonts/roboto-slab/RobotoSlab-Bold-webfont.eot');
+    src: url('webfonts/roboto-slab/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/roboto-slab/RobotoSlab-Bold-webfont.woff') format('woff'),
+         url('webfonts/roboto-slab/RobotoSlab-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+.page div {
+  font-family: 'RobotoSlab', 'sans-serif';
+}

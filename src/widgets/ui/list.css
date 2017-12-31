@@ -2,6 +2,5 @@
   margin-right: 1rem;
 }
 .List-ListItem {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }

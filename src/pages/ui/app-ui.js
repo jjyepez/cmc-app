@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // --- onsenui
 import ons from 'onsenui'
 // --- css, recursos, data y otras fuentes
+import '../../css/app.css'
 import './app-ui.css'
 import 'onsenui/css/onsenui.min.css';
 import 'onsenui/css/onsen-css-components.min.css';
@@ -21,12 +22,13 @@ class AppUI extends Component {
     )
   }
   renderTabs = () => {
+console.log(this.props.data)
     return [
       {
         content: (
           <Page key={0}>
             <List
-              data={this.props.data}
+              data = {this.props.data}
             />
           </Page>
         ),

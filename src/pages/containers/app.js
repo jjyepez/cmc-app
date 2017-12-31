@@ -46,9 +46,11 @@ class App extends Component {
   render() {
     return (
       <ErrorHandler>
-        <AppUI>
+        <AppUI
+          data = {this.state.data}
+        >
           <InfoGlobal
-            data = {this.state.data}
+            data = {this.state.dataInfoGlobal}
           />
         </AppUI>
       </ErrorHandler>
