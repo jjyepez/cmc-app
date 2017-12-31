@@ -22,6 +22,7 @@ class AppUI extends Component {
     )
   }
   renderTabs = () => {
+console.log(this.props)
     return [
       {
         content: (
@@ -40,7 +41,13 @@ class AppUI extends Component {
           />)
       },
       {
-        content: <Page key={1}>abc</Page>,
+        content: (
+          <Page key={1}>
+            <List
+              data = {this.props.dataFav}
+            />
+          </Page>
+        ),
         tab: (
           <Tab
             key={1}
