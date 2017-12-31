@@ -3,23 +3,29 @@ import React, { Component } from 'react'
 // --- recursos, data y otras fuentes
 // --- contenedores y UI
 import AppUI from '../ui/AppUI'
-import data from '../../data/data.json'
-import { DummyData } from '../../data/dummy-data'
+//import data from '../../data/data.json'
+import { GetAPIdata } from '../../data/get-api-data'
 
 class App extends Component {
   state = {
-    data
+    data: {rslt:'empty'}
   }
   componentWillMount = event => {
-    const dummy = new DummyData('nombre,apellido,avatar,correo',10, this.fetchCallback,
-    this.fetchFallback)
-    dummy.fetch()
+    const APIurl     = 'https://api.coinmarketcap.com/v1/global/'
+    const useCORS    = false
+    const infoGlobal = new GetAPIdata()
+    const options    = {
+      url     : APIurl,
+      cors    : useCORS,
+      callback: this.fetchCallback,
+      fallback: this.fetchFallback
+    }
+    infoGlobal.fetch( options )
   }
   fetchFallback = e => {
     this.setState({
       data
     })
-  console.log( 'Error', e )
   }
   fetchCallback = data => {
     this.setState({
@@ -32,8 +38,7 @@ class App extends Component {
   render() {
     return (
       <AppUI
-        {...data}
-        dataD = {this.state.data.rs}
+        {...this.state.data}
       />
     )
   }
