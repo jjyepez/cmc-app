@@ -1,0 +1,11 @@
+{
+  "rs": [
+    {
+      "_id": 0,
+      "nombre"  : "Julio",
+      "apellido": "Yépez",
+      "avatar"  : "https://avatars0.githubusercontent.com/u/2139352?s=128&v=4",
+      "correo"  : "jjyepez@gmail.com"
+    }
+  ]
+}
