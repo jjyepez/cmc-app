@@ -5,27 +5,63 @@ import './list.css'
 
 class ListUI extends Component{
   render(){
+    console.log(this.props)
     return (
       <List>
-        <ListHeader>Encabezado</ListHeader>
-        <ListItem className = "List-ListItem">
+        <ListHeader>
+        <div className = "ListItem-row">
+            <div className = "ListItem-dato">Rank</div>
+            <div className = "ListItem-logo">Logo</div>
+            <div className="ListItem-dato">Symbol</div>
+            <div className="ListItem-dato">Name</div>
+            <div className="ListItem-dato">PercCh 1 h%</div>
+            <div className="ListItem-dato">Price</div>
+          </div>
+        </ListHeader>
           {
-            this.props.data.map( (item, i) => {
+            this.props.data.map( item => {
+                const classPCh = item.percent_change_1h < 0 ? 'red' : 'green'
                 return (
-                  <div
-                    className="ListItem-dato"
-                    key = {i}
+                  <ListItem
+                    className = "List-ListItem"
+                    key = {parseInt(item.rank)}
                   >
-                    <b>{item[0]}</b>: {item[1]}
-                  </div>
+                  <div className = "ListItem-row">
+                      <div className = "ListItem-dato">{item.rank}</div>
+                      <div className = "ListItem-logo">
+                        <img
+                          width={32}
+                          height={32}
+                          src={`https://files.coinmarketcap.com/static/img/coins/32x32/${item.id}.png`}
+                        />
+                      </div>
+                      <div className="ListItem-dato">{item.symbol}</div>
+                      <div className="ListItem-dato">{item.name}</div>
+                      <div className={`ListItem-dato ${classPCh}`}>{item.percent_change_1h}%</div>
+                      <div className="ListItem-dato">${item.price_usd}</div>
+                    </div>
+                  </ListItem>
                 )
               }
             )
           }
-        </ListItem>
       </List>
     )
   }
 }
 
 export default ListUI
+
+/*
+this.props.data.map( (item, i) => {
+    return (
+      <div
+        className="ListItem-dato"
+        key = {i}
+      >
+        <b>{item[0]}</b>: {item[1]}
+      </div>
+    )
+  }
+)
+*/

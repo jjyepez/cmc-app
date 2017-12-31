@@ -22,7 +22,6 @@ class AppUI extends Component {
     )
   }
   renderTabs = () => {
-console.log(this.props.data)
     return [
       {
         content: (
@@ -32,16 +31,24 @@ console.log(this.props.data)
             />
           </Page>
         ),
-        tab: <Tab key={0} label='Home' icon='md-home' />
+        tab: (
+          <Tab
+            key={0}
+            label='Home'
+            icon='md-home'
+            modifier = "ios"
+          />)
       },
       {
         content: <Page key={1}>abc</Page>,
-        tab: <Tab key={1} label='Settings' icon='md-settings' />
+        tab: (
+          <Tab
+            key={1}
+            label='Favorite'
+            icon='md-favorite'
+            tabBorder = {false}
+          />)
       },
-      {
-        content: <Page key={2}>abc</Page>,
-        tab: <Tab key={2} label='Hot' icon='md-fire' />
-      }
     ]
   }
   renderPage = (estado, navigator) => {
@@ -49,13 +56,12 @@ console.log(this.props.data)
       <Page
         renderToolbar = {this.renderToolbar.bind(this, estado, navigator)}
         className     = "AppUI"
-        modifier      = "material"
         key           = {estado.title}
       >
         <Tabbar
           swipeable
           renderTabs = {this.renderTabs}
-          position   = "top"
+          position   = "bottom"
           index      = {0}
         />
       </Page>
