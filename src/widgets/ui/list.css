@@ -1,7 +1,7 @@
 .ListItem-row {
   display: table;
   width: 100%;
-  padding-right: 1rem;
+  padding-right: .5rem;
 }
 .ListItem-row > div {
   display: table-cell;
@@ -11,14 +11,18 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.ListItem-row > div:nth-child(1) { min-width: 2rem; width: 2rem; border-right: 1px solid #ccc;}
-.ListItem-row > div:nth-child(2) { min-width: 4rem; width: 4rem; }
-.ListItem-row > div:nth-child(3) { min-width: 3.5rem; width: 3.5rem; text-align: left;}
-.ListItem-row > div:nth-child(4) { flex: 1; text-align: left; }
-.ListItem-row > div:nth-child(5) { min-width: 5rem; width: 5rem; }
-.ListItem-row > div:nth-child(6) { min-width: 6rem; width: 6rem; }
+.ListItem-row > div:nth-child(1) { min-width: 2rem; width: 2rem; padding-right:.5rem}
+.ListItem-row > div:nth-child(2) { min-width: 32px; width: 32px;}
+.ListItem-row > div:nth-child(3) { flex: 1; text-align: left; padding-left: .75rem; }
+.ListItem-row > div:nth-child(4) { min-width: 5rem; width: 5rem; text-align: right;}
+.ListItem-row > div:nth-child(5) { min-width: 1rem; width: 1rem; }
 
 .ListItem-row > div:last-child{ text-align: right; }
 
-.red{color:red}
-.green{color:green}
+.ListItem-dato small {
+  font-size: .85rem;
+  color: #777;
+}
+
+.red{color:red !important}
+.green{color:green !important}

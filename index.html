@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <title>CMC-app (beta 0.1)</title>
     <link rel="stylesheet" href="./dist/css/webfonts.css">
+    <link rel="stylesheet" href="./dist/css/estilos.css">
   </head>
   <body>
     <div id="app">
       <!-- contenido renderizado con React -->
     </div>
     <!--script type="text/javascript" src="http://localhost:9000/dist/js/App.js"></script-->
-    <script type="text/javascript" src="./dist/js/app.js"></script>
+    <script type="text/javascript">
+      let $s = document.createElement('Script');
+      $s.src = `./dist/js/app.js?r=${Math.random()}`
+      document.body.append($s)
+    </script>
   </body>
 </html>

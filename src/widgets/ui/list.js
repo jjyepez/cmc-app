@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Avatar from './avatar'
 import { List, ListHeader, ListItem } from 'react-onsenui'
 import './list.css'
 
-class ListUI extends Component{
+class ListUI extends PureComponent{
   render(){
-    console.log(this.props)
     return (
       <List>
         <ListHeader>
         <div className = "ListItem-row">
-            <div className = "ListItem-dato">Rank</div>
+            <div className = "ListItem-dato">#</div>
             <div className = "ListItem-logo">Logo</div>
-            <div className="ListItem-dato">Symbol</div>
-            <div className="ListItem-dato">Name</div>
+            <div className="ListItem-dato">Symbol and Name</div>
             <div className="ListItem-dato">PercCh 1 h%</div>
             <div className="ListItem-dato">Price</div>
           </div>
@@ -35,10 +33,16 @@ class ListUI extends Component{
                           src={`https://files.coinmarketcap.com/static/img/coins/32x32/${item.id}.png`}
                         />
                       </div>
-                      <div className="ListItem-dato">{item.symbol}</div>
-                      <div className="ListItem-dato">{item.name}</div>
-                      <div className={`ListItem-dato ${classPCh}`}>{item.percent_change_1h}%</div>
-                      <div className="ListItem-dato">${item.price_usd}</div>
+                      <div className="ListItem-dato">
+                        {item.symbol}<br/>
+                        <small>{item.name}</small>
+                      </div>
+                      <div className="ListItem-dato">${item.price_usd}<br/>
+                        <small className={`ListItem-dato ${classPCh}`}>{item.percent_change_1h}%</small>
+                      </div>
+                      <div className="ListItem-dato">
+                        <small>⭐</small>
+                      </div>
                     </div>
                   </ListItem>
                 )

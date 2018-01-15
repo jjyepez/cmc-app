@@ -11,8 +11,8 @@ import { GetAPIdata } from '../../data/get-api-data'
 
 class App extends Component {
   state = {
-    data: [['rslt','empty']],
-    dataFav: [['rslt','empty']],
+    data: [],
+    dataFav: [],
   }
   componentWillMount = event => {
     // const APIurl     = 'https://api.coinmarketcap.com/v1/global/'
